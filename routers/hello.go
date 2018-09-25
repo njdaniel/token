@@ -3,6 +3,7 @@ package routers
 import (
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/mux"
+	"github.com/njdaniel/token/controllers"
 )
 
 func SetHelloRoutes(router *mux.Router) *mux.Router {

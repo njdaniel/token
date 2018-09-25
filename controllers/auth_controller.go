@@ -3,11 +3,14 @@ package controllers
 import (
 	"encoding/json"
 	"net/http"
+
+	"github.com/njdaniel/token/services"
+	"github.com/njdaniel/token/services/models"
 )
 
 // Login with username/password and return token
 func Login(w http.ResponseWriter, r *http.Request) {
-	requestUser := new(model.User)
+	requestUser := new(models.User)
 	decoder := json.NewDecoder(r.Body)
 	decoder.Decode(&requestUser)
 
